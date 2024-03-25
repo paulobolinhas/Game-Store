@@ -1,46 +1,46 @@
-# Projeto
-# Projeto de PSI 2022/23
+# Project
+# PSI Project 2022/23
 
-# Objetivo do projeto
-A vossa empresa decidiu melhorar a divulgação dos jogos produzidos, implementando um sistema que proporciona mais visibilidade de seus produtos e permite uma maior interação entre os seus jogadores. A vossa equipa de desenvolvimento foi incubida de iniciar o desenvolvimento deste projeto fundamental para o futuro da empresa!
+# Project's goal
+Your company decided to improve the dissemination of the games produced, implementing a system that provides more visibility for your products and allows greater interaction between your players. Your development team was tasked with starting the development of this fundamental project for the future of the company!
 
-# Execução do projeto
-As características deste projeto requerem uma equipa composta por 5 elementos, com competências e responsabilidades bem definidas e distintas, que serão avaliadas. Devido à importância do projeto, o processo de avaliação seguirá regras rigorosas. A constituição das equipas é realizada na atividade Grupos de PSI na página de PSI no Moodle. O projeto seguirá uma metodologia de desenvolvimento de software inspirada na metodologia Kanban, que possui papéis e atividades bem definidos, operacionalizada pela plataforma JIRA Agile.
+# Project execution
+The characteristics of this project require a team made up of 5 members, with well-defined and distinct skills and responsibilities, which will be evaluated. Due to the importance of the project, the evaluation process will follow strict rules. The formation of teams is carried out in the PSI Groups activity on the PSI page in Moodle. The project will follow a software development methodology inspired by the Kanban methodology, which has well-defined roles and activities, operated by the JIRA Agile platform.
 
-Como parte da metodologia Kanban, o conjunto de funcionalidades a implementar durante cada sprint é definido no início do sprint. O backlog inicial é composto pelos itens abaixo (estes itens podem sofrer alterações a qualquer momento). Todos estes itens têm os seguintes critérios de aceitação em comum: (i) deve ser possível concluir o processo num browser desktop ou mobile; (ii) deve ser possível concluir o processo num browser desktop sem usar o rato.
+As part of the Kanban methodology, the set of features to be implemented during each sprint is defined at the beginning of the sprint. The initial backlog consists of the items below (these items may change at any time). All of these items have the following acceptance criteria in common: (i) it must be possible to complete the process on a desktop or mobile browser; (ii) it must be possible to complete the process in a desktop browser without using the mouse.
 
-Em cada sprint pretende-se que seja construída uma versão completa de funcionalidades do sistema de informação na framework escolhida. No final de cada sprint é feita uma demonstração das funcionalidades.
+In each sprint, the aim is to build a complete version of the information system's functionalities in the chosen framework. At the end of each sprint, a demonstration of the features is made.
 
-# Restrições 
-Quaisquer imagens e vídeos ilustrativos devem estar alojados externamente.
+# Restrictions
+Any illustrative images and videos must be hosted externally.
 
-# Aspetos técnicos
-Os projetos utilizarão servidores implementando o stack tecnológico MEAN (MongoDB, Express, Angular, NodeJS). Os clientes terão obrigatoriamente de ser browsers web. É ainda necessário estruturar o sistema de informação de acordo com as seguintes quatro camadas: 1) cliente browser; 2) servidor web com lógica de apresentação; 3) servidor aplicacional com regras de negócio; e 4) servidor de base de dados.
+# Technical aspects
+The projects will use servers implementing the MEAN technology stack (MongoDB, Express, Angular, NodeJS). Customers must be web browsers. It is also necessary to structure the information system according to the following four layers: 1) browser client; 2) web server with presentation logic; 3) application server with business rules; and 4) database server.
 
-# Plataforma de execução do projeto
-O projeto deve ser executado no servidor appserver.alunos.di.fc.ul.pt
+# Project execution platform
+The project must be run on the appserver.vamos.di.fc.ul.pt server
 
-O acesso ao servidor é feito através de ssh sendo o username o número do grupo. A password inicial é também o número do grupo e deve ser alterada após o primeiro login
+Access to the server is done through ssh with the username being the group number. The initial password is also the group number and must be changed after the first login
 
-> ssh psi050@appserver.alunos.di.fc.ul.pt
-O appserver tem instalados node, npm e mongo. Todos os módulos necessários para funcionamento do projeto devem ser instalados recorrendo ao npm.
+> ssh psi050@appserver.vamos.di.fc.ul.pt
+The appserver has node, npm and mongo installed. All modules necessary for the project to function must be installed using npm.
 
-Cada grupo tem uma base de dados criada no servidor mongo. O nome da base de dados é igual ao número do grupo (p.ex. o grupo psi050 deve usar a base de dados psi050). 
+Each group has a database created on the mongo server. The database name is the same as the group number (e.g. group psi050 must use database psi050).
 
-Cada grupo tem um utilizador no servidor mongo. O nome do utilizador é igual ao número do grupo. A password também é igual ao número do grupo. Para acederem à consola do mongo usem o comando (substituindo psiXXX pelo número do grupo)
+Each group has a user on the mongo server. The user name is the same as the group number. The password is also the same as the group number. To access the mongo console, use the command (replacing psiXXX with the group number)
 
-mongo --username psiXXX --password --authenticationDatabase psiXXX appserver.alunos.di.fc.ul.pt/psiXXX
-Cada grupo tem dois portos abertos para acesso por http a servidores node. O primeiro porto no intervalo 3001 a 3035 e o segundo porto no intervalo 3051 a 3085. Por exemplo, o grupo psi003 deve usar os portos 3003 e 3053. É assim importante que configurem os servidores node (para o front-end e back-end) nesses portos.
+mongo --username psiXXX --password --authenticationDatabase psiXXX appserver.vamos.di.fc.ul.pt/psiXXX
+Each group has two ports open for http access to node servers. The first port in the range 3001 to 3035 and the second port in the range 3051 to 3085. For example, the psi003 group must use ports 3003 and 3053. It is therefore important that you configure the node servers (for the front-end and back-end ) in these ports.
 
-A forma de executar o servidor node que serve o front-end Angular deve ser a seguinte (onde o XXXX que define o porto deve ser o específico de cada grupo)
+The way to run the node server that serves the Angular front-end must be as follows (where the XXXX that defines the port must be specific to each group)
 
 ng serve --port XXXX --host 0.0.0.0 --disableHostCheck true
-Para o servidor node que serve o back-end não é necessário mudar a forma de execução.
+For the node server that serves the back-end, it is not necessary to change the way of execution.
 
-A connection string para acesso à base de dados mongo deve ser a seguinte (onde devem substituir psiXXX pelo número do grupo)
+The connection string to access the mongo database must be the following (where psiXXX must be replaced by the group number)
 
 mongodb://psiXXX:psiXXX@localhost:27017/psiXXX?retryWrites=true&authSource=psiXXX
-Recomendação sobre o processo de desenvolvimento (controlo de versões)
-É vivamente recomendado que utilizem a plataforma git (git.alunos.di.fc.ul.pt) durante o desenvolvimento do projeto. O uso de controlo de versões irá facilitar o trabalho de uma equipa de 5 pessoas e irá permitir passar o código desenvolvido nas máquinas de desenvolvimento para o servidor de demonstração de uma forma fácil.
+Recommendation on the development process (version control)
+It is strongly recommended that you use the git platform (git.vamos.di.fc.ul.pt) during project development. The use of version control will facilitate the work of a team of 5 people and will allow the code developed on the development machines to be transferred to the demo server in an easy way.
 
-Recomenda-se vivamente que criem um branch no repositório para cada tarefa que seja criada na ferramenta JIRA. O branch deve ser identificado pelo número da tarefa no JIRA de modo a permitir a sua identificação de uma forma quase imediata.
+It is strongly recommended that you create a branch in the repository for each task that is created in the JIRA tool. The branch must be identified by the task number in JIRA in order to allow its identification almost immediately.
