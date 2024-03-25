@@ -14,16 +14,6 @@ Em cada sprint pretende-se que seja construída uma versão completa de funciona
 # Restrições 
 Quaisquer imagens e vídeos ilustrativos devem estar alojados externamente.
 
-# Entregas
-No final de cada sprint deve ser entregue um vídeo com a demonstração das funcionalidades implementadas durante o sprint e um relatório que indique, das user stories no sprint backlog, o que foi completado no sprint e o estado do que ficou por completar.
-
-Os vídeos, com um máximo de 2 minutos, que demonstram os resultados obtidos em cada sprint devem ser entregues através da atividade existente na página da disciplina no Moodle. O nome do ficheiro deve seguir o seguinte formato: psi_xxx_sprint_y, onde xxx é o número do grupo e y o número do sprint.
-
-Os relatórios, com um máximo de 2 páginas, devem ser entregues através da mesma atividade. O nome do ficheiro deve seguir o seguinte formato: psi_xxx_sprint_y, onde xxx é o número do grupo e y o número do sprint.
-
-# Avaliações
-A avaliação do projeto tem em consideração a qualidade do produto desenvolvido e a qualidade do processo de desenvolvimento. Os dois sprints têm o mesmo peso na avaliação.  
-
 # Aspetos técnicos
 Os projetos utilizarão servidores implementando o stack tecnológico MEAN (MongoDB, Express, Angular, NodeJS). Os clientes terão obrigatoriamente de ser browsers web. É ainda necessário estruturar o sistema de informação de acordo com as seguintes quatro camadas: 1) cliente browser; 2) servidor web com lógica de apresentação; 3) servidor aplicacional com regras de negócio; e 4) servidor de base de dados.
 
