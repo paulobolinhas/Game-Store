@@ -22,14 +22,14 @@ The project must be run on the appserver.vamos.di.fc.ul.pt server
 
 Access to the server is done through ssh with the username being the group number. The initial password is also the group number and must be changed after the first login
 
-> ssh psi050@appserver.vamos.di.fc.ul.pt
+> ssh psi050@appserver.alunos.di.fc.ul.pt
 The appserver has node, npm and mongo installed. All modules necessary for the project to function must be installed using npm.
 
 Each group has a database created on the mongo server. The database name is the same as the group number (e.g. group psi050 must use database psi050).
 
 Each group has a user on the mongo server. The user name is the same as the group number. The password is also the same as the group number. To access the mongo console, use the command (replacing psiXXX with the group number)
 
-mongo --username psiXXX --password --authenticationDatabase psiXXX appserver.vamos.di.fc.ul.pt/psiXXX
+mongo --username psiXXX --password --authenticationDatabase psiXXX appserver.alunos.di.fc.ul.pt/psiXXX
 Each group has two ports open for http access to node servers. The first port in the range 3001 to 3035 and the second port in the range 3051 to 3085. For example, the psi003 group must use ports 3003 and 3053. It is therefore important that you configure the node servers (for the front-end and back-end ) in these ports.
 
 The way to run the node server that serves the Angular front-end must be as follows (where the XXXX that defines the port must be specific to each group)
