@@ -1,6 +1,4 @@
-# Project
 # PSI Project 2022/23
-
 
 # Project's goal
 Your company decided to improve the dissemination of the games produced, implementing a system that provides more visibility for your products and allows greater interaction between your players. Your development team was tasked with starting the development of this fundamental project for the future of the company!
